@@ -5,7 +5,7 @@
       <div class="info">
         <p>{{product.content}}</p>
       </div>
-      <div class="price">
+      <div class="buttons" >
         <button class="auto" v-on:click="remove(product)">Delete</button>
         <button class="auto" v-on:click="add_to(product)">Add to Favorites</button>
       </div>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ProductList',
+  name: 'NoteList',
   props: {
     products: Array
   },
@@ -53,7 +53,7 @@ export default {
 .product {
   margin: 10px;
   margin-top: 50px;
-  width: 200px;
+
 }
 
 .product img {
@@ -73,7 +73,6 @@ export default {
   background: #ffffb3;
   color: #000;
   padding: 10px 30px;
-
 }
 
 .info h1 {
@@ -90,7 +89,7 @@ export default {
 }
 
 
-.price {
+.buttons {
   display: flex;
 }
 
