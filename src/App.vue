@@ -44,10 +44,16 @@ export default {
   },
   methods:{
   addComment() {
+    var currentdate = new Date();
+    var monther = currentdate.getMonth()
     this.$root.$data.notes.push({
       id: this.$root.$data.notes.length + 1,
       name: "You",
-      content: this.addedComment
+      content: this.addedComment,
+      month: monther
+
+
+
     });
     console.log(this.$root.$data.notes)
   },
