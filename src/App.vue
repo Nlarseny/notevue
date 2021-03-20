@@ -15,7 +15,7 @@
       </router-link>
       <router-link to="/cart">
         <div class="menu-item">
-          <img src="/images/love.png">
+          <img src="/info.jpg" height ="50">
           <p>0 items</p>
         </div>
       </router-link>
