@@ -3,10 +3,10 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
-        <h1>{{product.name}}</h1>
         <p>{{product.content}}</p>
       </div>
       <div class="price">
+        <button class="auto" v-on:click="remove(product)">Delete</button>
         <button class="auto" v-on:click="add_to(product)">Add to Favorites</button>
       </div>
     </div>
@@ -24,6 +24,13 @@ export default {
     add_to(product) {
       this.$root.$data.fav.push(product);
       console.log(product);
+    },
+    remove(product) {
+    const index = this.$root.$data.notes.map(item => item.id).indexOf(product.id);
+    console.log(index);
+    if (index > -1) {
+      this.$root.$data.notes.splice(index, 1);
+    }
     }
   },
 }
@@ -63,10 +70,10 @@ export default {
 }
 
 .info {
-  background: green;
+  background: #ffffb3;
   color: #000;
   padding: 10px 30px;
-  height: 80px;
+
 }
 
 .info h1 {
@@ -79,7 +86,7 @@ export default {
 
 .info p {
   margin: 0px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 

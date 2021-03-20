@@ -3,11 +3,9 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
-        <h1>{{product.name}}</h1>
+        <p>{{product.content}}</p>
       </div>
       <div class="price">
-        <h2>{{product.content}}</h2>
-
         <button class="auto" v-on:click="remove(product)">Remove</button>
 
       </div>
@@ -66,10 +64,9 @@ export default {
   margin-bottom: 5px;
 }
 .info {
-  background: #F2921D;
+  background: #ccfff5;
   color: #000;
   padding: 10px 30px;
-  height: 80px;
 }
 .info h1 {
   font-size: 16px;
@@ -79,7 +76,7 @@ export default {
 }
 .info p {
   margin: 0px;
-  font-size: 10px;
+  font-size: 15px;
 }
 .price {
   display: flex;

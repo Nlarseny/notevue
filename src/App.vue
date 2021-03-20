@@ -20,10 +20,40 @@
         </div>
       </router-link>
     </div>
+    <div>
+    <h1>Create a note here:</h1>
+    <form v-on:submit.prevent="addComment">
+        <textarea v-model="addedComment"></textarea>
+        <br />
+        <button>Make Note</button>
+    </form>
+    </div>
+  </div>
+  <div>
+
   </div>
   <router-view />
 </div>
 </template>
+
+<script>
+export default {
+  name: 'ProductList',
+  props: {
+    products: Array
+  },
+  methods:{
+  addComment() {
+    this.$root.$data.notes.push({
+      id: this.$root.$data.notes.length + 1,
+      name: "You",
+      content: this.addedComment
+    });
+    console.log(this.$root.$data.notes)
+  },
+}
+}
+</script>
 
 <style>
 * {
