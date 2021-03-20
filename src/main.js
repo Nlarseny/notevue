@@ -14,7 +14,11 @@ let data = {
     name: "different",
     content: "This boy",
   }],
-  fav: []
+  fav: [{
+    id: 2,
+    name: "different",
+    content: "This boy",
+  }]
 }
 
 new Vue({

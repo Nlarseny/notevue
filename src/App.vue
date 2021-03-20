@@ -7,16 +7,16 @@
       </router-link>
     </div>
     <div id="side">
-      <router-link to="/browse">
+      <router-link to="/fav">
         <div class="menu-item browse">
           <img src="/notepad_plain_paper.png" height="50">
-          <p>Browse</p>
+          <p>Favorites</p>
         </div>
       </router-link>
-      <router-link to="/cart">
+      <router-link to="/fav">
         <div class="menu-item">
           <img src="/info.jpg" height ="50">
-          <p>0 items</p>
+          <p>Info Stuff</p>
         </div>
       </router-link>
     </div>
