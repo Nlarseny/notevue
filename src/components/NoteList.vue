@@ -3,7 +3,17 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
+        <p>Content:</p>
+        <br>
         <p>{{product.content}}</p>
+        <hr>
+        <p>Date:</p>
+        <br>
+        <p>{{product.day}} {{product.month}} {{product.year}}</p>
+        <hr>
+        <p>Time:</p>
+        <br>
+        <p>{{product.hour}}:{{product.min}}</p>
       </div>
       <div class="buttons" >
         <button class="auto" v-on:click="remove(product)">Delete</button>
