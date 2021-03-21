@@ -9,7 +9,7 @@
         <hr>
         <p>Date:</p>
         <br>
-        <p>{{product.day}} {{product.month}} {{product.year}}</p>
+        <p>{{product.month}}/{{product.day}}/{{product.year}}</p>
         <hr>
         <p>Time:</p>
         <br>

@@ -13,12 +13,6 @@
           <p>Favorites</p>
         </div>
       </router-link>
-      <router-link to="/fav">
-        <div class="menu-item">
-          <img src="/info.jpg" height ="50">
-          <p>Info Stuff</p>
-        </div>
-      </router-link>
     </div>
     <div>
     <h1>Create a note here:</h1>
@@ -30,13 +24,19 @@
     </div>
   </div>
   <div>
-
   </div>
   <router-view />
+  <footer class="bottom">
+    <div class="text-center p-3" style="background-color: #bad4f7">
+      2021 Copyright (maybe):
+      <a class="text-dark" href="https://github.com/BYU-CS-260-Winter-2021/lab-3a-vue-xkcd-browser-Nlarseny" target="_blank">Github Classroom Link</a>
+    </div>
+  </footer>
 </div>
 </template>
 
 <script>
+
 export default {
   name: 'ProductList',
   props: {
@@ -45,15 +45,22 @@ export default {
   methods:{
   addComment() {
     var currentdate = new Date();
-    var monther = currentdate.getMonth()
+    var cur_month = currentdate.getMonth();
+    var cur_year = currentdate.getFullYear();
+    var cur_day = currentdate.getDay();
+
+    var cur_min = currentdate.getMinutes();
+    var cur_hour = currentdate.getHours();
+
     this.$root.$data.notes.push({
       id: this.$root.$data.notes.length + 1,
       name: "You",
       content: this.addedComment,
-      month: monther
-
-
-
+      month: cur_month + 1,
+      day: cur_day,
+      year: cur_year,
+      min: cur_min,
+      hour: cur_hour,
     });
     console.log(this.$root.$data.notes)
   },

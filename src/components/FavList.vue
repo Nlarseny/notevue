@@ -2,9 +2,19 @@
 <div class="wrapper">
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
-      <div class="info">
-        <p>{{product.content}}</p>
-      </div>
+    <div class="info">
+      <p>Content:</p>
+      <br>
+      <p>{{product.content}}</p>
+      <hr>
+      <p>Date:</p>
+      <br>
+      <p>{{product.month}}/{{product.day}}/{{product.year}}</p>
+      <hr>
+      <p>Time:</p>
+      <br>
+      <p>{{product.hour}}:{{product.min}}</p>
+    </div>
       <div class="price">
         <button class="auto" v-on:click="remove(product)">Remove</button>
 
