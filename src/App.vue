@@ -29,7 +29,7 @@
   <footer class="bottom">
     <div class="text-center p-3" style="background-color: #bad4f7">
       2021 Copyright (maybe):
-      <a class="text-dark" href="https://github.com/BYU-CS-260-Winter-2021/lab-3a-vue-xkcd-browser-Nlarseny" target="_blank">Github Classroom Link</a>
+      <a class="text-dark" href="https://github.com/Nlarseny/notevue" target="_blank">Github Classroom Link</a>
     </div>
   </footer>
 </div>
